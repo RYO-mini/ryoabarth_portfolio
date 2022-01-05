@@ -107,7 +107,7 @@ jobs:
           command: |
             ssh -p 10022 ryoabarth@sv8260.xserver.jp 'source ~/.bash_profile; cd ~/ryo-abarth.net/portfolio && git pull'
             ssh -p 10022 ryoabarth@sv8260.xserver.jp 'source ~/.bash_profile; cd ~/ryo-abarth.net/portfolio && composer install'
-            ssh -p 10022 ryoabarth@sv8260.xserver.jp 'source ~/.bash_profile; cd ~/ryo-abarth.net/portfolio && php artisan migrate'
+            ssh -p 10022 ryoabarth@sv8260.xserver.jp 'source ~/.bash_profile; cd ~/ryo-abarth.net/portfolio && php artisan migrate --force'
             ssh -p 10022 ryoabarth@sv8260.xserver.jp 'source ~/.bash_profile; cd ~/ryo-abarth.net/portfolio && php artisan queue:restart'
             ssh -p 10022 ryoabarth@sv8260.xserver.jp 'source ~/.bash_profile; cd ~/ryo-abarth.net/portfolio && php artisan view:clear'
             ssh -p 10022 ryoabarth@sv8260.xserver.jp 'source ~/.bash_profile; cd ~/ryo-abarth.net/portfolio && php artisan cache:clear'
